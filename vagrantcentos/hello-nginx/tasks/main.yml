@@ -1,0 +1,14 @@
+---
+# tasks file for hello-nginx
+  - name: hello-nginx container
+    docker_container:
+      name: hello-nginx
+      image: nginx
+      state: started
+      recreate: yes
+      restart: yes
+      exposed_ports:
+        - 80
+      ports:
+        - "80:80"
+

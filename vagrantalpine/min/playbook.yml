@@ -1,5 +1,18 @@
 ---
 - hosts: all
+  become: true
   tasks:
     - name: ensure ntpd is at the latest version
       shell: uname -a
+    - name: Add alpine community docker package
+      lineinfile:
+       dest: /etc/apk/repositories
+       line: 'http://dl-cdn.alpinelinux.org/alpine/edge/community'
+    - name: Update package
+      shell: apk update
+    - name: Install docker
+      shell: apk add docker
+    - name: Start docker
+      service:
+        name: docker
+        state: restarted

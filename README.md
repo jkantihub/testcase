@@ -29,4 +29,6 @@ Run the following commands to get started with centos 7 builder
 
 * $ cd testcase/vagrantcentos
 
+* #### Update SRC_GIT_URL in playbook.yml ####
+ 
 * $ vagrant up

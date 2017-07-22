@@ -1,0 +1,25 @@
+---
+# tasks file for nginx-build
+  - name: Create build directory 
+    file:
+      path: /app
+      state: directory
+      mode: 0755
+  - name: Pull website
+    git:
+      repo: https://github.com/jkantihub/jkantihub.github.io.git
+      dest: /app/www
+  - name: Copy Dockerfile to /app for build
+    copy:
+      src: "{{ role_path }}/files/Dockerfile"
+      dest: /app/Dockerfile
+  - name: Copy nginx default.conf to /app for build
+    copy:
+      src: "{{ role_path }}/files/default.conf"
+      dest: /app/default.conf
+  - name: Build image and with buildargs
+    docker_image:
+      path: /app
+      name: mynginx
+      buildargs:
+        external_url: "http://abc.xyz"

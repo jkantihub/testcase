@@ -1,9 +1,10 @@
 ---
 # tasks file for hello-nginx
-  - name: hello-nginx container
+  - name: hello-nginx custom container
     docker_container:
       name: hello-nginx
-      image: nginx
+      image: mynginx
+#      image: nginx
       state: started
       recreate: yes
       restart: yes

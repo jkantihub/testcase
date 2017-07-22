@@ -11,6 +11,10 @@
     yum:
       name: docker-python
       state: present
+  - name: install git
+    yum:
+      name: git
+      state: present
   - name: start docker service
     service:
       name: docker

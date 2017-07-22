@@ -32,3 +32,5 @@ Run the following commands to get started with centos 7 builder
 * #### Update SRC_GIT_URL in playbook.yml ####
  
 * $ vagrant up
+
+* http://10.20.30.40 

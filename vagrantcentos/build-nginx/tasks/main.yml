@@ -7,7 +7,7 @@
       mode: 0755
   - name: Pull website
     git:
-      repo: https://github.com/jkantihub/jkantihub.github.io.git
+      repo: "{{ SRC_GIT_URL }}" # eg. https://github.com/jkantihub/xxxx.io.git
       dest: /app/www
   - name: Copy Dockerfile to /app for build
     copy:

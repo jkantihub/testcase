@@ -17,6 +17,7 @@ You should have the following installed on your machine.
 
 1. Vagrant with libvirt or any other hypervisor ( tested with 1.8.1 )
 2. Ansible version 2.2.x
+3. Static website uploaded in git.This can be configured in playbook.yml as SRC_GIT_URL 
 
 ## Run the deployment using Centos box 
 The Vagrantfile has the entry for config.vm.box = "centos/7".

@@ -1,6 +1,6 @@
 # Testcase
 
-The testcase example is created to show how vagrant and ansible provisioner can be combined to build a microservice.
+The testcase example is created to show how vagrant and ansible provisioner can be combined to build a microservice on Docker.
 The current application is an nginx based static website which is pulled from github.
 
 The Vagrantfile is the starting point.
@@ -10,8 +10,19 @@ The Vagrantfile is the starting point.
 * [Deploying using centos](#deploying-centos)
 
 ## Introduction
+The testcase has been built keeping in mind the need to run a static website.The source of the website is also pulled from github.
 
 ## Requirements
+You should have the following installed on your machine.
 
-## Deploying using centos
+1. Vagrant with libvirt or any other hypervisor ( tested with 1.8.1 )
+2. Ansible version 2.2.x
+
+## Run the deployment using Centos box 
+The Vagrantfile has the entry for config.vm.box = "centos/7".
+If your machine does not have the box , it will get downloaded from vagrant cloud
  
+* Run the following commands to get started with centos 7 builder
+** $ git pull https://github.com/jkantihub/testcase
+** $ cd testcase/vagrantcentos
+** $ vagrant up

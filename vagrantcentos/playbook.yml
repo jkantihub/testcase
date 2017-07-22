@@ -3,5 +3,5 @@
   become: true
   roles:
     - prework 
-    - { role: build-nginx, SRC_GIT_URL: "Edit this before running the build eg. https://github.com/jkantihub/xxxx.io.git" }
+    - { role: build-nginx, SRC_GIT_URL: "Edit this before running the build eg. https://github.com/jkantihub/jkantihub.github.io.git" }
     - hello-nginx 

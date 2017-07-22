@@ -23,6 +23,9 @@ The Vagrantfile has the entry for config.vm.box = "centos/7".
 If your machine does not have the box , it will get downloaded from vagrant cloud
  
 * Run the following commands to get started with centos 7 builder
+
 ** $ git pull https://github.com/jkantihub/testcase
+
 ** $ cd testcase/vagrantcentos
+
 ** $ vagrant up
